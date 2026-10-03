@@ -1,0 +1,35 @@
+@import "./vars.css";
+
+header {
+  height: 10vh;
+  border-bottom: 2px solid var(--border-color);
+}
+
+header div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(40px, 5vw, 200px);
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 12px 22px;
+  border: none;
+  border-radius: var(--radius-md);
+
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+
+  transition:
+    background-color 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease;
+}

@@ -1,0 +1,23 @@
+@import "./styles/reset.css";
+@import "./styles/header.css";
+@import "./styles/vars.css";
+@import "./styles/main.css";
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: var(--font-title);
+  color: var(--color-text);
+  background: var(--color-bg);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+.title {
+  font-family: var(--font-title);
+  font-weight: 700;
+}
