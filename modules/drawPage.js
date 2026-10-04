@@ -39,6 +39,11 @@ progressInfo.append(" out of 8 pairs");
 drawNewHtml("section", "main", "board-container");
 drawNewHtml("div", ".board-container", "board");
 
+// Footer
+drawNewHtml("footer", "body");
+drawNewHtml("div", "footer", "wrapper");
+drawNewHtml("p", "footer div").textContent = "Theme: meme cats";
+
 export function drawCard(id) {
   const btn = document.createElement("button");
   btn.className = "card";
