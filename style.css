@@ -2,6 +2,7 @@
 @import "./styles/header.css";
 @import "./styles/vars.css";
 @import "./styles/main.css";
+@import "./styles/modal.css";
 
 .wrapper {
   max-width: 1440px;
@@ -20,4 +21,8 @@ h2,
 .title {
   font-family: var(--font-title);
   font-weight: 700;
+}
+
+html.no-scroll {
+  overflow: hidden;
 }

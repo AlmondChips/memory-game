@@ -1,0 +1,68 @@
+@import "./vars.css";
+
+.modal-bg {
+  position: absolute;
+  inset: 0;
+  background-color: var(--modal-bg);
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal {
+  padding: 30px 60px;
+
+  gap: 25px;
+
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  background: var(--modal-inner-bg);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 20px;
+}
+
+.modal-bg.visible {
+  opacity: 1;
+}
+
+.lb-table {
+  display: grid;
+  grid-template-rows: auto;
+  padding: 10px 0;
+  border-top: 2px solid var(--modal-border);
+  border-bottom: 2px solid var(--modal-border);
+  row-gap: 5px;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.table-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-cell:first-child {
+  width: 25px;
+  height: 25px;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+}

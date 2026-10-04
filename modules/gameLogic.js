@@ -1,5 +1,6 @@
 import { drawCard } from "./drawPage.js";
-
+import { drawModal } from "./modal.js";
+import { saves } from "./saveGame.js";
 let turn, progress, pairs, board;
 
 export function startGame() {
@@ -72,7 +73,8 @@ const getFlipHandler = () => {
 
     openCard(card);
     if (progress === 8) {
-      console.log("Win!");
+      drawModal("win");
+      saves.save(turn);
     }
   }
 

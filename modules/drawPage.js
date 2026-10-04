@@ -6,7 +6,7 @@ const body = document.querySelector("body");
  * @param {string} className
  * @return {HTMLElement}
  */
-function drawNewHtml(elem, whereTo, className = "") {
+export function drawNewHtml(elem, whereTo, className = "") {
   const existingElement = document.querySelector(whereTo);
   const newElem = document.createElement(elem);
   className ? (newElem.className = className) : null;
@@ -18,16 +18,9 @@ function drawNewHtml(elem, whereTo, className = "") {
 // Header
 drawNewHtml("header", "body");
 drawNewHtml("div", "header", "wrapper");
-const btnNewGame = (drawNewHtml(
-  "button",
-  "header div",
-  "btn-new-game",
-).textContent = "New game");
-const btnLeaderboard = (drawNewHtml(
-  "button",
-  "header div",
-  "btn-leaderboard",
-).textContent = "Leaderboards");
+drawNewHtml("button", "header div", "btn-new-game").textContent = "New game";
+drawNewHtml("button", "header div", "btn-leaderboard").textContent =
+  "Leaderboard";
 
 // Main - stats
 drawNewHtml("main", "body", "wrapper");
