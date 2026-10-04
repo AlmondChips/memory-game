@@ -28,8 +28,6 @@ function generatePairs() {
 
     pairs.set(cardIds.pop(), img);
   }
-
-  console.log(pairs);
 }
 
 function shuffle(array = []) {
@@ -68,7 +66,6 @@ const getFlipHandler = () => {
   let turnCards = [];
   function click(e) {
     if (isLocked) return;
-    console.log(isTurn);
     const card = e.currentTarget;
 
     openCard(card);

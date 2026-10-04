@@ -67,11 +67,9 @@ function drawLeaderboard(modalBg) {
     drawNewHtml("h2", ".modal").textContent = "No records yet";
   } else {
     drawNewHtml("div", ".modal", "lb-table");
-    console.log(records);
 
     const sortedRecords = records.sort((r1, r2) => {
       const turnsDif = r1.turns - r2.turns;
-      console.log(turnsDif);
       return turnsDif !== 0 ? turnsDif : new Date(r1.date) - new Date(r2.date);
     });
 
