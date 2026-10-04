@@ -18,13 +18,3 @@ export const saves = {
     return `${dd}.${mm}.${yyyy}`;
   },
 };
-
-saves.save(30);
-saves.save(30);
-saves.save(30);
-saves.save(30);
-saves.save(30);
-saves.save(30);
-saves.save(30);
-saves.save(30);
-saves.save(30);
