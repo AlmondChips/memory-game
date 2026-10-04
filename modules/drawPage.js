@@ -44,18 +44,18 @@ progressInfo.append(" out of 8 pairs");
 
 // Main - board
 drawNewHtml("section", "main", "board-container");
-const board = drawNewHtml("div", ".board-container", "board");
+drawNewHtml("div", ".board-container", "board");
 
-function drawCard(path = "../assets/imgs/1.png") {
+export function drawCard(id) {
   const btn = document.createElement("button");
   btn.className = "card";
   btn.type = "button";
-  btn.ariaLabel = "Open the card";
+  btn.ariaLabel = `Open the card №${id}`;
+  btn.dataset.id = id;
 
   const img = document.createElement("img");
   img.className = "card-image";
-  img.src = path;
-  img.alt = "Cat 1";
+  img.alt = "Cat";
 
   const cardFront = document.createElement("div");
   cardFront.className = "card-face card-front";
@@ -71,12 +71,4 @@ function drawCard(path = "../assets/imgs/1.png") {
   btn.append(cardInner);
 
   return btn;
-}
-
-for (let i = 0; i < 16; i++) {
-  const card = drawCard(`../assets/imgs/${i + 1}.png`);
-  card.addEventListener("click", () => {
-    card.classList.toggle("is-flipped");
-  });
-  board.append(card);
 }
